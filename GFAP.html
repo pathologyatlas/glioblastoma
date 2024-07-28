@@ -1,12 +1,11 @@
-html_text <- function(TemplateTR, TemplateEN, stain, dzi_info) {
-  html_string <- '<html> <!-- do not use <!DOCTYPE html> -->
+<html> <!-- do not use <!DOCTYPE html> -->
 
 <head>
 
-  <title>{{TemplateEN}} {{TemplateTR}}</title>
-  <meta name="keywords" content="{{TemplateEN}}, {{TemplateTR}}, patoloji, atlas, pathology, whole slide image, virtual microscopy, virtual microscope, sanal mikroskop">
+  <title>Glioblastoma Glioblastom</title>
+  <meta name="keywords" content="Glioblastoma, Glioblastom, patoloji, atlas, pathology, whole slide image, virtual microscopy, virtual microscope, sanal mikroskop">
 
-  <meta name="description" content="{{TemplateEN}} {{TemplateTR}}">
+  <meta name="description" content="Glioblastoma Glioblastom">
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,15 +43,15 @@ html_text <- function(TemplateTR, TemplateEN, stain, dzi_info) {
       navigatorBackground: "rgb(240, 240, 240)",
       tileSources: {
         Image: {
-          Url: "./{{stain}}_files/",
+          Url: "./GFAP_files/",
           TileSize: "254",
           Overlap: "1",
           Format: "jpeg",
           ServerFormat: "Default",
           xmlns: "http://schemas.microsoft.com/deepzoom/2008",
           Size: {
-            Width: "{{width}}",
-            Height: "{{height}}"
+            Width: "70782",
+            Height: "47610"
           }
         }
       }
@@ -138,20 +137,4 @@ html_text <- function(TemplateTR, TemplateEN, stain, dzi_info) {
 </body>
 </html>
 
-'
-
-  html_text_list <- list()
-  for (s in trimws(stain)) {
-    data <- list(
-      TemplateTR = TemplateTR,
-      TemplateEN = TemplateEN,
-      stain = s,
-      width = dzi_info[[s]]$width,
-      height = dzi_info[[s]]$height
-    )
-    text <- whisker::whisker.render(html_string, data)
-    html_text_list[[s]] <- text
-  }
-  return(html_text_list)
-}
 
