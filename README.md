@@ -129,6 +129,23 @@ See Microscopy with viewer:
 
 
 
+
+
+---
+
+### Viewing Modes
+
+- [All Stains (Sequential)](https://images.patolojiatlasi.com/glioblastoma/all.html) - Browse GFAP, HE, NFP stains in sequence
+- [Side by Side Comparison](https://images.patolojiatlasi.com/glioblastoma/sidebyside.html) - View stains in synchronized panels
+- [Curtain Comparison](https://images.patolojiatlasi.com/glioblastoma/curtain.html) - Overlay two stains with a draggable slider
+
+### Görüntüleme Modları
+
+- [Tüm Boyamalar (Sıralı)](https://images.patolojiatlasi.com/glioblastoma/all.html) - Tüm boyamaları sırayla inceleyin
+- [Yan Yana Karşılaştırma](https://images.patolojiatlasi.com/glioblastoma/sidebyside.html) - Boyamaları eş zamanlı panellerde görüntüleyin
+- [Perde Karşılaştırma](https://images.patolojiatlasi.com/glioblastoma/curtain.html) - İki boyamayı sürgülü perde ile karşılaştırın
+
+
 ```yaml
 - stainname: glioblastoma-HE
   reponame: glioblastoma
